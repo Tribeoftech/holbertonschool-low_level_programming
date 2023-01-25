@@ -1,7 +1,2 @@
 #!/bin/bash
-
-ggc -E "$CFILE" -o main.c
-
-
-
-
+gcc -E "$CFILE" -o c
