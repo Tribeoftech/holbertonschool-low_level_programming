@@ -1,0 +1,7 @@
+#!/bin/bash
+
+ggc -E "$CFILE" -o main.c
+
+
+
+
