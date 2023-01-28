@@ -2,7 +2,7 @@
 
 /**
  * main - Prints all single digit numbers 0-10.
- * 
+ *
  *
  * Return: Always 0.
  */
