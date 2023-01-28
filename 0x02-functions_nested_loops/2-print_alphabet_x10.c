@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_alphabet_x10 - Task 2 program that prints the alphabet x10
- *
+ * main - Entry
  * Return: 0 (Successful)
  *
  */
