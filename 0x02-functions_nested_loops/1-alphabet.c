@@ -1,15 +1,21 @@
 #include "main.h"
-
 /**
- * main - check the code
+ * main - prints __putchar to the screen
  *
- * Return: Always 0.
+ * Return: 0 if runs succesful
+ *
  */
+
 int main(void)
-{ char bfarf;
-for (bfarf = 'a'; bfarf <= 'z'; bfarf++)
-_putchar(bfarf)
-_putchar('\n')
-print_alphabet();
-return (0);
+{
+	putchar('_');
+	putchar('p');
+	putchar('u');
+	putchar('t');
+	putchar('c');
+	putchar('h');
+	putchar('a');
+	putchar('r');
+	putchar('\n');
+	return (0);
 }
