@@ -1,19 +1,15 @@
 #include "main.h"
-int main(void)
+
 /**
- * print_alphabet - entry point
- *
- * Description: Prints the alphabet with _putchar
+ * main - check the code
  *
  * Return: Always 0.
  */
-void print_alphabet(void);
-{
-	char alpha;
-
-	for (alpha = 'a'; alpha <= 'z' ; alpha++)
-	{
-	_putchar(alpha);
-	}
-	_putchar('\n');
+int main(void)
+{ char bfarf;
+for (bfarf = 'a'; bfarf <= 'z'; bfarf++)
+_putchar(bfarf)
+_putchar('\n')
+print_alphabet();
+return (0);
 }

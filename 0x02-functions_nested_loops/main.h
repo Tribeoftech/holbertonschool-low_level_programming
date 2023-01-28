@@ -2,6 +2,5 @@
 #define HEADER_H
 
 #include <stdio.h>
-
-void FunctionName(void);
+void print_alphabet(void);
 #endif
