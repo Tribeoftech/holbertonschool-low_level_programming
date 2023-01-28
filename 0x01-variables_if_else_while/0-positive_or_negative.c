@@ -1,16 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/* more headers goes there */
 
-/* betty style doc for function main goes there */
+/**
+ * main - Prints all possible combinations of single-digit num.
+ *
+ * Return: Always 0.
+ *
+ */
+
 int main(void)
 {
-	int n;
+int n;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-       	if (n > 0)
+srand(time(0));
+n = rand() - RAND_MAX / 2;
+if (n > 0)
 {
 printf("%i is positive\n", n);
 }
