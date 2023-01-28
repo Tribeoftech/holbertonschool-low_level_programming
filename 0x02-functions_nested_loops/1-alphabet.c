@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * main - prints __putchar to the screen
+ * main - prints __putchar
  *
  * Return: 0 if runs succesful
  *
