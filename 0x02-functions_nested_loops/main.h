@@ -1,6 +1,6 @@
 #ifndef HEADER_H
-#define HEADER_H
+#include "main.h"
 
 #include <stdio.h>
-void FunctionName(void);
+void print_alphabet(void);
 #endif
