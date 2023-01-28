@@ -1,21 +1,19 @@
 #include "main.h"
-/**
- * main- print_alphabet- prints alpha
- *
- * Return: 0 if runs succesful
- *
- */
+#include <stdio.h>
 
+/**
+ * main- success
+ * Description prints alphabet
+ * Return: 0 if succesful
+ */
 
 void print_alphabet(void)
 {
-	putchar('_');
-	putchar('p');
-	putchar('u');
-	putchar('t');
-	putchar('c');
-	putchar('h');
-	putchar('a');
-	putchar('r');
-	putchar('\n');
+	char c;
+
+	for (c = 'a'; c <= 'z'; c++)
+	{
+		_putchar(c);
+	}
+	_putchar('\n');
 }
