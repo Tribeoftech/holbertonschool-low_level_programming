@@ -1,12 +1,13 @@
-#include <stdio.h>
+#include "main.h"
 /**
- * main - prints __putchar
+ * main- print_alphabet- prints alpha
  *
  * Return: 0 if runs succesful
  *
  */
 
-int main(void)
+
+void print_alphabet(void)
 {
 	putchar('_');
 	putchar('p');
@@ -17,5 +18,4 @@ int main(void)
 	putchar('a');
 	putchar('r');
 	putchar('\n');
-	return (0);
 }
