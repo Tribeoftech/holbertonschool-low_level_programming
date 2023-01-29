@@ -4,19 +4,19 @@
 /**
  * main - success
  *
- *@_print_alphabet - prints alphabet as a prototype to the main functioon
- *@p the character to 'print' the alphabet!
- * Return 0 if successful
+ * print_alphabet - prints alphabet in lowercase
+ *
+ * Return: 0 if succesful
  */
 
-
-void print_alphabet(void)
+int print_alphabet(void);
 {
-	char c;
-
-	for (c = 'a'; c <= 'z'; c++)
-	{
-		_putchar(c);
-	}
-	_putchar('\n');
+int c;
+for (c = 'a'; c <= 'z'; c++)
+{
+_putchar(c);
 }
+_putchar('\n');
+return (0);
+}
+
