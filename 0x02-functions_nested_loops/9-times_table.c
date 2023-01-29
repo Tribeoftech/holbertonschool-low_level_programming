@@ -1,7 +1,7 @@
 /*
  * File: 9-times_table.c
  *
- * Auth: Joshua Terry
+ * 
 */
 #include "main.h"
 #include <stdio.h>
