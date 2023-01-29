@@ -2,10 +2,13 @@
 #include <stdio.h>
 
 /**
- * main- success
- * Description: prints alphabet, upper, or lower,parameter or member
- * Return: 0 if succesful
+ * main - success
+ *
+ *@_print_alphabet - prints alphabet as a prototype to the main functioon
+ *@p the character to 'print' the alphabet!
+ * Return 0 if successful
  */
+
 
 void print_alphabet(void)
 {
