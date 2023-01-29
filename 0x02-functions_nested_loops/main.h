@@ -5,9 +5,9 @@
 #include <string.h>
 #include <unistd.h>
 /**
- * main - Entry point
- * main header
- * main functions
+ *
+ *
+ *
  *
  *
  */
