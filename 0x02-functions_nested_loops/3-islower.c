@@ -1,12 +1,12 @@
 #include "main.h"
 #include <stdio.h>
  /**
- * _islower - see description
+ * _islower - returns True if all the characters are in lower case, or false
  * main - success
- * Description: Print alpha 10 times
+ *
  * Return: Always 0 (Success)
  */
-int _isalpha(int c)
+int _islower(int c)
 {
 if (c <= 'a')
 {
