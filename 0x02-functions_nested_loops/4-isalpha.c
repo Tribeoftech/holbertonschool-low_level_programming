@@ -6,7 +6,7 @@
  *
  * Return: 0 if runs successful
  */
-int main(void)
+int _isalpha(int c);
 {
 char c;
 for (c = 'a'; c <= 'z'; c++)
