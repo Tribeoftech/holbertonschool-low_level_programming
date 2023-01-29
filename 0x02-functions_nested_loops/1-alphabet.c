@@ -3,7 +3,7 @@
 
 /**
  * main- success
- * Description prints alphabet
+ * Description: prints alphabet, upper, or lower,parameter or member
  * Return: 0 if succesful
  */
 
