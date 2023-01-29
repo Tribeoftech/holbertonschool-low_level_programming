@@ -1,17 +1,19 @@
-#include <stdio.h>
 #include "main.h"
-/**
+#include <stdio.h>
+ /**
  * _islower - see description
- * @c: number
+ * main - success
  * Description: Print alpha 10 times
  * Return: Always 0 (Success)
-*/
-int _isalpha(int c);
+ */
+int _isalpha(int c)
 {
-for (c <= 'a')
+if (c <= 'a')
 {
 return (1);
 }
 else
+{
+return (0);
 }
-return (0)
+}
