@@ -1,7 +1,8 @@
+#include "main.h"
 #include <stdio.h>
 /**
  * main - prints alphabet in lowercase
- *
+ * _isalpha- checks code
  *
  * Return: 0 if runs successful
  */
