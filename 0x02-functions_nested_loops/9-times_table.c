@@ -19,53 +19,25 @@ void times_table(void)
 		for (y = 0; y < 10; y++)
 		{
 			z = x * y;
-			if (z < 10)
+			if (y == 0)
 			{
-				_putchar(z + '0');
-			}
-			else if (z > 9)
+				_puthar('0');
+			}	
+			else if (z < 10)
 			{
-				_putchar('1');
-				_putchar((z % 10) + '0');
+			        _putchar(' ');
+			        _putchar(' ');
+			        _putchar(' ');
+			        _putchar('z + '0');
 			}
-			else if (z > 19)
+		        else
 			{
-				_putchar('2');
-				_putchar((z % 10) + '0');
+			        _putchar(' ');
+			        _putchar(' ');
+			        _putchar((z / 10) + '0');
+			        _putchar((z % 10) + '0');
 			}
-			else if (z > 29)
-			{
-				_putchar('3');
-				_putchar((z % 10) + '0');
-			}
-			else if (z > 39)
-			{
-				_putchar('4');
-				_putchar((z % 10) + '0');
-			}
-			else if (z > 49)
-			{
-				_putchar('5');
-				_putchar((z % 10) + '0');
-			}
-			else if (z > 59)
-			{
-				_putchar('6');
-				_putchar((z % 10) + '0');
-			}
-			else if (z > 69)
-			{
-				_putchar('7');
-				_putchar((z % 10) + '0');
-			}
-			else if (z > 79)
-			{
-				_putchar('8');
-				_putchar((z % 10) + '0');
-			}
-			_putchar(44);
-			_putchar(32);
 		}
-	_putchar(10);
-	}
+	_putchar('\n');
+	}        	
 }
