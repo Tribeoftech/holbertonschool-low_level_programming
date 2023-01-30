@@ -1,20 +1,20 @@
 #include "main.h"
 /**
  * print_alphabet_x10 - Task 2 program that prints the alphabet x10
- * main - Entry
+ * main - putchar(c)
  * Return: 0 (Successful)
  *
  */
 void print_alphabet_x10(void)
 {
-	char alpha;
+	char c;
 	int i = 0;
 
 	for (i = 0; i <= 9; i++)
 	{
-		for (alpha = 'a'; alpha <= 'z'; alpha++)
+		for (c = 'a'; c <= 'z'; c++)
 		{
-			putchar(alpha);
+			putchar(c);
 		}
 	putchar('\n');
 	}
