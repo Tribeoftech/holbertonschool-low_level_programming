@@ -12,60 +12,32 @@
 */
 void times_table(void)
 {
-	int x, y, z;
+	int a, b, x, y;
+	int z = 0;
 
-	for (x = 0; x < 10; x++)
+	for (x = 0; x <= 9; x++)
 	{
-		for (y = 0; y < 10; y++)
+		for (y = 0; y <= 9; y++)
 		{
-			z = x * y;
-			if (z < 10)
+			a = z / 10;
+			b = z % 10;
+			if (z > 9)
 			{
-				_putchar(z + '0');
+				_putchar(a + '0');
 			}
-			else if (z > 9)
+			if (z < 10 && y > 0)
 			{
-				_putchar('1');
-				_putchar((z % 10) + '0');
+				_putchar(' ');
 			}
-			else if (z > 19)
+			_putchar(b + '0');
+			if (y < 9)
 			{
-				_putchar('2');
-				_putchar((z % 10) + '0');
+				_putchar(',');
+				_putchar(' ');
 			}
-			else if (z > 29)
-			{
-				_putchar('3');
-				_putchar((z % 10) + '0');
-			}
-			else if (z > 39)
-			{
-				_putchar('4');
-				_putchar((z % 10) + '0');
-			}
-			else if (z > 49)
-			{
-				_putchar('5');
-				_putchar((z % 10) + '0');
-			}
-			else if (z > 59)
-			{
-				_putchar('6');
-				_putchar((z % 10) + '0');
-			}
-			else if (z > 69)
-			{
-				_putchar('7');
-				_putchar((z % 10) + '0');
-			}
-			else if (z > 79)
-			{
-				_putchar('8');
-				_putchar((z % 10) + '0');
-			}
-			_putchar(44);
-			_putchar(32);
+			z = z + x;
 		}
-	_putchar(10);
+	_putchar('\n');
+	z = 0;
 	}
 }
