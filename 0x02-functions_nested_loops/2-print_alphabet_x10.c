@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_alphabet_x10 - Task 2 program that prints the alphabet x10
- * main - putchar(c)
+ * main - _putchar(c)
  * Return: 0 (Successful)
  *
  */
@@ -14,8 +14,8 @@ void print_alphabet_x10(void)
 	{
 		for (c = 'a'; c <= 'z'; c++)
 		{
-			putchar(c);
+			_putchar(c);
 		}
-	putchar('\n');
+	_putchar('\n');
 	}
 }
