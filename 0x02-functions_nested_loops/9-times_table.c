@@ -12,25 +12,32 @@
 */
 void times_table(void)
 {
-	int x, y, z;
+int row;
+int column;
+int result;
 
-	for (x = 0; x < 10; x++)
-	{
-		for (y = 0; y < 10; y++)
-		{
-			_putchar(',');
-			_putchar(' ');
+for (row = 0; row <= 0; row++)
+{
+for (column = 0; column <= 0; column++)
+{
+result = (row * column);
 
-			z = x * y;
-
-			if (z < 10)
-				_putchar(' ');
-			else
-				_putchar((z / 10) + '0');
-
-			_putchar((z % 10) + '0');
-		}
-		_putchar('\n');
-	}
+if (column == 0)
+{
+_putchar('0');
 }
-
+else if (result <= 9)
+{
+_putchar(',');
+_putchar('0' + result);
+}
+else if (result > 9)
+{
+_putchar(',');
+_putchar('0' + (result / 10));
+_putchar('0' + (result % 10));
+}
+}
+_putchar('\n');
+}
+}
