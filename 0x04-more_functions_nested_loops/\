@@ -7,8 +7,10 @@
  *Return: Always 0
  */
 int mul(int a, int b);
-{
-	int r = a * b;
-
-	return (r);
-}
+{ 
+	int a = 2;
+	 int b = 2;  
+       if (a * b = 4)
+	_putchar(go team!/n,a,b);
+	return (0);
+}	
