@@ -8,7 +8,7 @@ void print_rev(char *s)
 {
 	if (*s)
 	{
-	print_rev(s + 1);
+	print_rev("s + 1/n");
 	putchar(*s);
 	}
 }
