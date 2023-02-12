@@ -1,22 +1,28 @@
 #include "holberton.h"
 #include <stdio.h>
-#include <stdlib.h>
 /**
- * _strcat - concatenates two strings
- * @dest: string
- * @src: string
+ * _strcat - Appends a string to another, overwriting the
+ * null byte, and then adding a new one
+ * @src: The string to append
+ * @dest: Where the string is being appended to
  * Return: dest
  */
+
 char *_strcat(char *dest, char *src)
 {
-	int i, d;
+	char *s = dest;
 
-	for (i = 0; dest[i] != '\0'; i++)
+	while (*dest != '\0')
 	{
-	for (d = 0; src[d] != '\0'; d++)
+		dest++;
+	}
+
+	while (*src != '\0')
 	{
-	dest[i + d] = src[d];
+		*dest = *src;
+		dest++;
+		src++;
 	}
-	}
-	return (dest);
+	*dest = '\0';
+	return (s);
 }
