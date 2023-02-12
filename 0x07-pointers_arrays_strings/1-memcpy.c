@@ -1,16 +1,16 @@
 #include "main.h"
 /**
- *
- *
- *
- *
- *
+ * _memcpy - asdf adf ads fasdf asdf
+ * @dest: adsf ads fasd sdfghjk
+ * @src: asdfghjkl
+ * @n: nasdfghjk sdfghjk dfghjk fghj
+ * Return: pfghjkdfghjfghjk
  */
-char *_memset(char *s, char b, unsigned int n)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
-        int i;
+	unsigned int i;
 
-        while (i = 0; i < 14; i++)
-                _memcpy(n + src = dest))
-        return (*dest)
-}  
+	for (i = 0; i < n; i++)
+		dest[i] = src[i];
+	return (dest);
+}
