@@ -1,33 +1,23 @@
 #include "main.h"
+
 /**
-* _strpbrk - search a string for set of bytes
-* @string: source string
-* @accepted_bytes: exactly what it says on the tin
-*
-* Return: blah blah blah
-*/
-char *_strpbrk(char *string, char *accepted_bytes)
+ * _strpbrk - Searches for a set of bytes
+ * @s: String
+ * @accept: String
+ * Return: Outputs the bytes that are shared by the two strs
+ */
+
+char *_strpbrk(char *s, char *accept)
 {
-	int address1 = 0;
-	int address2;
+	int x, y;
 
-	while (string[address1])
+	for (x = 0; s[x] != '\0'; x++)
 	{
-		address2 = 0;
-
-		while (accepted_bytes[address2])
+		for (y = 0; accept[y] != '\0'; y++)
 		{
-			if (string[address1] == accepted_bytes[address2])
-			{
-				string += address1;
-				return (string);
-			}
-
-			address2++;
+			if (accept[y] == s[x])
+				return (&s[x]);
 		}
-
-		address1++;
 	}
-
-	return (string);
+	return ('\0');
 }
