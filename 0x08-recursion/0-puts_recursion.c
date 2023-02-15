@@ -8,19 +8,11 @@
  */
 void _puts_recursion(char *s)
 {
-	int a = -22;
-
-	if (a >= 0)
-	{
-	putchar(*s);
-	}
-	else if (a <= 0)
-		(a++);
-	{
-	_puts_recursion(s + 1);
-	}
-	{
-	putchar('\n');
-	}
-	return;
+if (*s == '\0')
+putchar('\n');
+else
+{
+putchar(*s);
+_puts_recursion(s + 1);
+}
 }
