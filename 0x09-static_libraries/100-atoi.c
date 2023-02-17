@@ -4,7 +4,7 @@
  * @s: string to convert
  * Return: integer
  */
-int _atoi(char *s);
+int _atoi(char *s)
 {
 int i, j, k, l, m;
 i = j = k = l = m = 0;
@@ -25,4 +25,3 @@ if (j % 2 != 0)
 k = -k;
 return (k);
 }
-
