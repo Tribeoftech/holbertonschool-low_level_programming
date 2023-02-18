@@ -1,36 +1,35 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
- * main - adds two numbers
- * @argc: number of arguements
- * @argv: numbers to add are index 1 and 2
- *
- * Return: EXIT_SUCCESS if successful and return 1 if no arguements
- *
+ * main - add
+ * @argc:int
+ * @argv:string
+ * Return:int
  */
-
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	int i;
-	int sum;
+	int x = 0, i, j;
 
-	if (argc == 1)
+	for (i = 1; i < argc; i++)
 	{
-		printf("0\n");
-		return (0);
-	}
-	i = 1;
-	sum = 0;
-	while (argv[i] != argv[argc])
-	{
-		if  (atoi(argv[i]) == '\0')
+
+		for (j = 0; argv[i][j]; j++)
 		{
-			printf("Error\n");
-			return (1);
+			if (isdigit(argv[i][j]) == 0)
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		sum += atoi(argv[i]);
-		i++;
 	}
-	printf("%d\n", sum);
-	return (0);
+
+	for (i = 1; i < argc; i++)
+	{
+		x += atoi(argv[i]);
+	}
+
+	printf("%d\n", x);
+
+		return (0);
 }
