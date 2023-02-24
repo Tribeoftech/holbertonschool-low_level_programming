@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <stdio.h>
+
 /**
  * _strcat - Appends a string to another, overwriting the
  * null byte, and then adding a new one
