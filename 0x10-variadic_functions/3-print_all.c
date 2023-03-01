@@ -1,83 +1,51 @@
-#include "variadic_functions.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <stdarg.h>
-
+#include "variadic_functions.h"
 /**
- * print_all - Prints anything
- * @format: list of types of arguments passed to function
- * Return: void
+ * print_all - prints everything
+ * @format: format of the string to be printed
  */
 
 void print_all(const char * const format, ...)
 {
-	int i = 0, x;
-	char *spacer = "";
-	va_list strings;
+	unsigned int i;
+	va_list args;
+	int flag;
+	char *s;
 
-	typecheck_t specifiers[] = {
-		{'c', printchar},
-		{'i', printint},
-		{'f', printfloat},
-		{'s', printstring},
-		{'\0', NULL}
-	};
-	va_start(strings, format);
-
-	while (format[i] != '\0' && format != NULL)
+	va_start(args, format);
+	i = 0;
+	while (format && format[i])
 	{
-	x = 0;
-		while (specifiers[x].input != '\0')
+		flag = 0;
+		switch (format[i])
 		{
-			if (format[i] == specifiers[x].input)
-			{
-				printf("%s", spacer);
-				specifiers[x].formtype(strings);
-				spacer = ", ";
-			}
-		x++;
+		case 'c':
+			printf("%c", va_arg(args, int));
+			flag = 1;
+			break;
+		case 'i':
+			printf("%d", va_arg(args, int));
+			flag = 1;
+			break;
+		case 'f':
+			printf("%f", va_arg(args, double));
+			flag = 1;
+			break;
+		case 's':
+			s = va_arg(args, char *);
+			if (s == NULL)
+				s = "(nil)";
+			printf("%s", s);
+			flag = 1;
+			break;
 		}
-	i++;
+		if (flag == 1 && format[i + 1])
+			printf(", ");
+		i++;
 	}
 	printf("\n");
-	va_end(strings);
-}
-
-/**
- * printchar - handles spec c
- * @strings: va_list
- */
-void printchar(va_list strings)
-{
-	printf("%c", va_arg(strings, int));
-}
-
-/**
- * printint - handles spec i
- * @strings: va_list
- */
-void printint(va_list strings)
-{
-	printf("%d", va_arg(strings, int));
-}
-
-/**
- * printfloat - handles spec f
- * @strings: va_list
- */
-void printfloat(va_list strings)
-{
-	printf("%f", va_arg(strings, double));
-}
-
-/**
- * printstring - handles spec s
- * @strings: va_list
- */
-void printstring(va_list strings)
-{
-	if (strings == NULL)
-	{
-		printf("(nil)");
-	}
-	printf("%s", va_arg(strings, char*));
+	va_end(args);
 }
