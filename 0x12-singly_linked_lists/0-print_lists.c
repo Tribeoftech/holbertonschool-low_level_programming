@@ -8,20 +8,20 @@
  *
  * Return: Number of elements in list
  */
-
 size_t print_list(const list_t *h)
 {
-const list_t *temp = h;
-size_t count = 0;   /* count of elements */
+    size_t count = 0;
 
-while (temp != NULL)
+    while (h != NULL)
     {
-    count++;
-    temp = temp->next;
+        if (h->str != NULL)
+            printf("[%d] %s\n", h->len, h->str);
+        else
+            printf("[0] (nil)\n");
+        
+        h = h->next;
+        count++;
     }
-    if (temp == NULL)
-	printf("List is empty\n");
 
-	return (count);
+    return count;
 }
-
