@@ -1,41 +1,46 @@
-
-
 #include "lists.h"
-#include "_strlen.c"
 /**
- * add_node - add a new head node at the begining of the list_t list
- * @head: pointer to the current head
- * @str: String to copy into new head
- *
- * Return: address of new element, or NULL if it failed
- *
+ * add_node - Adds a new node to the beginning of list_t
+ * @head: Pointer to head of list
+ * @str: String inside node
+ * Return: Address of new element
  */
-
 
 list_t *add_node(list_t **head, const char *str)
 {
-	char *cpyString;
-	list_t *newnode;
-	int length = 0;
+	list_t *new_node;
 
-	newnode = malloc(sizeof(list_t));
-		if (newnode == NULL)
-			return (NULL);
+	new_node = malloc(sizeof(list_t));
 
-	cpyString = strdup(str);
-	if (cpyString == NULL)
+	if (new_node == NULL)
 	{
-		free(newnode);
 		return (NULL);
 	}
+	new_node->str = strdup(str);
+	if (new_node->str == NULL)
+	{
+		free(new_node);
+		return (NULL);
+	}
+	new_node->len = length(new_node->str);
+	new_node->next = *head;
+	*head = new_node;
+	return (*head);
+}
 
-	length = _strlen(cpyString);
+/**
+ * length - finds length of string
+ * @s: String
+ * Return: Length of string
+ */
 
-	newnode->str = cpyString;
-	newnode->len = length;
-	newnode->next = *head;
+unsigned int length(char *s)
+{
+	unsigned int x = 0;
 
-	*head = newnode;
-
-	return (newnode);
+	while (s[x])
+	{
+		x++;
+	}
+	return (x);
 }
