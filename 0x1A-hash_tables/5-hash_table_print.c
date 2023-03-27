@@ -1,32 +1,33 @@
 #include "hash_tables.h"
 
+
 /**
- * hash_table_print - Prints a hash table as a python dictionary
- * @ht: Hash table to print
- * Return: None
+ * hash_table_print - prints a hash table
+ * @ht: pntr to table
+ * Return: void
  */
 
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned long int x;
-	hash_node_t *p;
-	char n = 0;
+	hash_node_t *search;
+	int flag = 1;
+	unsigned long int index;
 
-	if (ht)
+	if (!ht)
+		return;
+	printf("{");
+
+	for (index = 0; index < ht->size; index++)
 	{
-		printf("{");
-		for (x = 0; ht && x < ht->size; x++)
+		search = ht->array[index];
+		while (search != NULL)
 		{
-			p = ht->array[x];
-			while (p)
-			{
-				if (n == 1)
-					printf(", ");
-				printf("'%s': '%s'", p->key, p->value);
-				p = p->next;
-				n = 1;
-			}
+			if (flag == 0)
+				printf(", ");
+			printf("'%s': '%s'", search->key, search->value);
+			flag = 0;
+			search = search->next;
 		}
-		printf("}\n");
 	}
+	printf("}\n");
 }
